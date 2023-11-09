@@ -1,0 +1,169 @@
+@use '../../../vars';
+@use '../../../mixins';
+
+.filters-container .country-filter {
+  position: absolute;
+  top: 2.75em;
+  left: 0;
+  font-size: 1rem;
+  padding: 0.75em 1em;
+  background-color: #fff;
+  border: 2px solid vars.$primary-color;
+  border-radius: 7.5px;
+  width: 80%;
+}
+
+.filters-container .country-filter .countries-container {
+  margin-bottom: 0.5rem;
+}
+
+.filters-container .country-filter .country-row {
+  display: block;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+
+.filters-container .country-filter .country-row:not(:last-of-type) {
+  margin-bottom: 7.5px;
+}
+
+.filters-container .country-filter .country-row > input[type="checkbox"] {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.filters-container
+  .country-filter
+  .country-row
+  > input[type="checkbox"]
+  + *::before {
+  content: "";
+  display: inline-block;
+  width: 1.15rem;
+  height: 1.15rem;
+  border: #ededed solid 0.1rem;
+  border-radius: 3px;
+  background-color: #ededed;
+  margin-right: 11px;
+}
+
+.filters-container
+  .country-filter
+  .country-row
+  > input[type="checkbox"]:checked
+  + *::before {
+  content: "";
+  text-align: center;
+  background: vars.$primary-color;
+  border-color: vars.$primary-color;
+}
+.filters-container
+  .country-filter
+  .country-row
+  > input[type="checkbox"]
+  + span {
+  display: flex;
+  align-items: center;
+}
+
+.filters-container .country-filter > button {
+  @include mixins.button(
+    #fff,
+    vars.$primary-color,
+    0.9rem,
+    0.3em 1em,
+    5px,
+    2px solid vars.$primary-color,
+    100%
+  );
+  margin-top: 5px;
+  transition: 0.3s background-color, 0.2s border-color;
+  &:hover {
+    background-color: vars.$secondary-color;
+    border-color: vars.$secondary-color;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .filters-container .country-filter {
+    font-size: 0.9rem;
+    width: 75%;
+  }
+
+  .filters-container
+    .country-filter
+    .country-row
+    > input[type="checkbox"]
+    + *::before {
+    width: 1.05rem;
+    height: 1.05rem;
+  }
+
+  .filters-container .country-filter > button {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .filters-container .country-filter {
+    font-size: 0.9rem;
+  }
+
+  .filters-container
+    .country-filter
+    .country-row
+    > input[type="checkbox"]
+    + *::before {
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+
+  .filters-container .country-filter > button {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .filters-container .country-filter {
+    font-size: 0.9rem;
+    width: 80%;
+  }
+
+  .filters-container
+    .country-filter
+    .country-row
+    > input[type="checkbox"]
+    + *::before {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .filters-container .country-filter > button {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .filters-container .country-filter {
+    font-size: 0.9rem;
+    width: 80%;
+  }
+
+  .filters-container
+    .country-filter
+    .country-row
+    > input[type="checkbox"]
+    + *::before {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .filters-container .country-filter > button {
+    font-size: 0.8rem;
+  }
+}
