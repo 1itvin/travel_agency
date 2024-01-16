@@ -1,0 +1,61 @@
+@use '../../../mixins';
+@use '../../../vars';
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f9fa;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15px;
+
+      label {
+        margin-bottom: 5px;
+      }
+
+      input {
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ced4da;
+      }
+    }
+
+    button {
+      // background-color: $find-tour-btn-color;
+      background-color: #1aa483;
+      font-size: inherit;
+      border-radius: 5px;
+      border: none;
+      color: #fff;
+      padding: 0;
+      height: 2.4em;
+      width: 50%;
+      font-family: inherit;
+      margin-left: 0.75em;
+      cursor: pointer;
+      transition: 0.2s background-color;
+
+      &:hover {
+        // background-color: $find-tour-btn-hover-color; 28967c
+        background-color: #28967c; 
+      }
+
+      // &:before {
+      //   content: "Зарегистрироваться";
+      // }
+    }
+  }
+}

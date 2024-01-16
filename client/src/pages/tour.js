@@ -17,7 +17,7 @@ function TourPage() {
   useEffect(() => document.title = (title) ? `Traveler | ${title} Tour` : 'Traveler | Tour', [title]);
 
   useEffect(() => {
-    setCurrentPage({ 'home': false, 'all-tours': false })
+    setCurrentPage({ 'home': false, 'all-tours': false})
   }, [setCurrentPage])
   
   return (

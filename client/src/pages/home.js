@@ -12,7 +12,7 @@ function HomePage() {
   useEffect(() => document.title = 'Traveler | Home', []);
 
   useEffect(() => {
-    setCurrentPage({ 'home': true, 'all-tours': false })
+    setCurrentPage({ 'home': true, 'all-tours': false})
   }, [setCurrentPage])
   
   return (

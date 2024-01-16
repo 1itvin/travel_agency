@@ -8,7 +8,7 @@ function Header() {
   return (
     <header>
       <div className="main-container">
-        <h1 className="logo">Travel<span>er</span></h1>
+        {/* <h1 className="logo">Travel<span>er</span></h1> */}
         <nav>
           <ul>
             <li className={currentPage['home'] ? 'selected': ''}>
@@ -17,6 +17,22 @@ function Header() {
             <li className={currentPage['all-tours'] ? 'selected': ''}>
               <Link to="/all-tours" onClick={() => window.scrollTo(0,0)}>All Tours</Link>
             </li>
+            <li className={currentPage['sign-in'] ? 'selected': ''}>
+            <Link to="/log-in" onClick={() => window.scrollTo(0,0)}>Sign in</Link>
+            </li>
+
+            {/* <li className={currentPage['register'] ? 'selected': ''}>
+            <Link to="/register" onClick={() => window.scrollTo(0,0)}>Register Now1</Link>
+            </li> */}
+
+            {/* <li className={currentPage['register'] ? 'selected': ''}>
+            <Link to="/register" onClick={() => window.scrollTo(0,0)}>Register Now2</Link>
+            </li> */}
+
+            {/* <li className={currentPage['register'] ? 'selected': ''}>
+            <Link to="/register" onClick={() => window.scrollTo(0,0)}>Register Now3</Link>
+            </li> */}
+
           </ul>
         </nav>
       </div>

@@ -9,7 +9,7 @@ function AllTours() {
   useEffect(() => document.title = 'Traveler | All Tours', []);
 
   useEffect(() => {
-    setCurrentPage({ 'home': false, 'all-tours': true })
+    setCurrentPage({ 'home': false, 'all-tours': true})
   }, [setCurrentPage])
 
   return (

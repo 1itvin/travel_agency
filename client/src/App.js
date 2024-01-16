@@ -6,6 +6,9 @@ import Notification from './components/common/notification';
 import HomePage from './pages/home.js';
 import AllToursPage from './pages/allTours';
 import TourPage from './pages/tour';
+import signInPage from './pages/signIn';
+import LogIn from './pages/login';
+import Register from './pages/register';
 
 export const CurrentPageContext = React.createContext();
 export const CountryContext = React.createContext();
@@ -25,6 +28,9 @@ function App() {
             <Switch>
               <CountryContext.Provider value={{selectedCountry, setSelectedCountry}}>
                 <Route exact path='/' component={HomePage} />
+                {/* <Route exact path='/sign-in' component={signInPage} /> */}
+                <Route exact path='/log-in' component={LogIn} />
+                <Route exact path='/register' component={Register} />
                 <Route path='/all-tours' component={AllToursPage} />
                 <Route path="/tour/:tourId" component={TourPage} />
               </CountryContext.Provider>
